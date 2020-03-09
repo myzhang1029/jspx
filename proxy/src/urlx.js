@@ -235,8 +235,10 @@ export function adjustNav(urlStr) {
 
   // 搜索
   if (part.substr(0,7) == "search/")
-  const keyword = encodeURIComponent(part.substr(7))
-  return PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
+  {
+    const keyword = encodeURIComponent(part.substr(7))
+    return PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
+  }
  
   // 任意数量 `-` 之后的部分
 
