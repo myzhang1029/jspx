@@ -247,7 +247,6 @@ export function adjustNav(urlStr) {
     return PREFIX + ret
   }
 
-  const keyword = encodeURIComponent(part)
   return //PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
 }
 
