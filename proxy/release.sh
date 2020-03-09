@@ -1,4 +1,4 @@
-DST=../../www/assets
+DST=../www/assets
 
 rm $DST/bundle.*.js
 

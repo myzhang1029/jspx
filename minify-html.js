@@ -9,5 +9,5 @@ html-minifier \
   --remove-attribute-quotes \
   --minify-css true \
   --minify-js '{"toplevel": true, "ie8": true}' \
-  -o ../../www/404.html \
-  404.html
+  -o www/404.html \
+  www/404.html
