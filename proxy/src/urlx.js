@@ -216,6 +216,7 @@ export function adjustNav(urlStr) {
   // 分隔符 `-----` 之后的部分
   const rawUrlStr = urlStr.substr(PREFIX_LEN)
   const rawUrlObj = newUrl(rawUrlStr)
+  console.log("Hello0")
 
   if (rawUrlObj) {
     // 循环引用

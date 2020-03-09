@@ -12,8 +12,7 @@ for i in bundle.*.js; do
   printf "\
 jsproxy_config=\
 x=>{\
-__CONF__=x;\
-importScripts(__FILE__=x.assets_cdn+'$i')\
+importScripts('assets/$i')\
 };\
 importScripts('conf.js')\
 " > ../sw.js
