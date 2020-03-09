@@ -232,7 +232,7 @@ export function adjustNav(urlStr) {
     }
   }
 
-  const part = urlStr.substr(ROOT_LEN).replace(/^-*/, '')
+  let part = urlStr.substr(ROOT_LEN)
 
   console.log("Hello1")
   // 搜索
@@ -245,6 +245,7 @@ export function adjustNav(urlStr) {
  
   // 任意数量 `-` 之后的部分
 
+  part = part.replace(/^-*/, '')
   const ret = padUrl(part)
   if (ret) {
     return PREFIX + ret

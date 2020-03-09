@@ -56,8 +56,7 @@
     btnGo.onclick = function() {
       const text = txtURL.value.trim();
       if (text) {
-        const url = './-----' + text;
-        open(url, '_blank', 'noopener,noreferrer');
+        window.location.href = './-----' + text;
       }
     }
     txtURL.onkeypress = function(e) {
@@ -69,8 +68,7 @@
     btnSearch.onclick = function() {
       const text = txtSearch.value.trim();
       if (text) {
-        const url = './search/' + text;
-        open(url, '_blank', 'noopener,noreferrer');
+        window.location.href = './search/' + text;
       }
     }
     txtSearch.onkeypress = function(e) {
