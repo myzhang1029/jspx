@@ -425,11 +425,9 @@ async function onFetch(e) {
     return fetch(mConf.assets_cdn + filePath)
   }
 
-  if (req.mode === 'navigate') {
-    const newUrl = urlx.adjustNav(urlStr)
-    if (newUrl) {
-      return Response.redirect(newUrl, 301)
-    }
+  const newUrl = urlx.adjustNav(urlStr)
+  if (newUrl) {
+    return Response.redirect(newUrl, 301)
   }
 
   let targetUrlStr = urlx.decUrlStrAbs(urlStr)
