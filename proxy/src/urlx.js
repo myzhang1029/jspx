@@ -248,6 +248,6 @@ export function adjustNav(urlStr) {
   }
 
   const keyword = part.replace(/&/g, '%26')
-  return PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
+  return //PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
 }
 
