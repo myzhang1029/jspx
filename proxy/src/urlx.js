@@ -190,7 +190,7 @@ export function replaceHttpRefresh(val, relObj) {
  *  https://www.google.com/search?q=xxx
  */
 
-const DEFAULT_SEARCH = 'https://www.google.com/search?q=%s'
+const DEFAULT_SEARCH = 'https://www.google.com/search?q=%s&hl=en'
 
 
 /**
@@ -247,7 +247,7 @@ export function adjustNav(urlStr) {
     return PREFIX + ret
   }
 
-  const keyword = part.replace(/&/g, '%26')
+  const keyword = encodeURIComponent(part)
   return //PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
 }
 
