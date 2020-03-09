@@ -233,10 +233,12 @@ export function adjustNav(urlStr) {
 
   const part = urlStr.substr(ROOT_LEN).replace(/^-*/, '')
 
+  console.log("Hello1")
   // 搜索
   if (part.substr(0,7) == "search/")
   {
     const keyword = encodeURIComponent(part.substr(7))
+    console.log("Hello2")
     return PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
   }
  
