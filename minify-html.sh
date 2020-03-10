@@ -1,4 +1,5 @@
 # 压缩 404.html
+cd $(dirname $0)
 html-minifier \
   --collapse-whitespace \
   --remove-comments \
@@ -9,5 +10,5 @@ html-minifier \
   --remove-attribute-quotes \
   --minify-css true \
   --minify-js '{"toplevel": true, "ie8": true}' \
-  -o www/404.html \
-  www/404.html
+  -o docs/404.html \
+  docs/404.html

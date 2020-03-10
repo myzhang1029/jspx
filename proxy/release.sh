@@ -1,4 +1,6 @@
-DST=../www/assets
+DST=../docs/assets
+
+cd $(dirname $0)
 
 rm $DST/bundle.*.js
 
