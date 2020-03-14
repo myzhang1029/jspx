@@ -18,7 +18,7 @@
     var last = +sessionStorage._ts || 0
     var count = +sessionStorage._count || 0
     sessionStorage._ts = curr
-    sessionStorage._count += 1
+    sessionStorage._count = count + 1
     if (curr - last < 1000) {
       return setTimeout(reload, 5000)
     }
