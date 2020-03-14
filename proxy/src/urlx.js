@@ -241,11 +241,11 @@ export function adjustNav(urlStr) {
     return PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
   }
 
-  // 站点assets
+  /* 站点assets
   if (part.substr(0,7) == "assets/")
   {
       return
-  }
+  }*/
  
   // 任意数量 `-` 之后的部分
 
@@ -255,6 +255,6 @@ export function adjustNav(urlStr) {
     return PREFIX + ret
   }
 
-  return //PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
+  return
 }
 

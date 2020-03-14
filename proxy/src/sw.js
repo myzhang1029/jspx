@@ -399,11 +399,6 @@ async function onFetch(e) {
   const urlStr = urlx.delHash(req.url)
 
   console.log(urlStr)
-  const newUrl = urlx.adjustNav(urlStr)
-  if (newUrl) {
-    return Response.redirect(newUrl, 301)
-  }
-
   // 首页（例如 https://zjcqoo.github.io/）
   if (urlStr === path.ROOT || urlStr === path.HOME) {
     let indexPath = mConf.assets_cdn + mConf.index_path
@@ -433,6 +428,11 @@ async function onFetch(e) {
 
   let targetUrlStr = urlx.decUrlStrAbs(urlStr)
   
+  const newUrl = urlx.adjustNav(urlStr)
+  if (newUrl) {
+    return Response.redirect(newUrl, 301)
+  }
+
   const handler = mUrlHandler[targetUrlStr]
   if (handler) {
     const {

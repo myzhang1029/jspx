@@ -17,5 +17,5 @@ x=>{\
 importScripts('$i')\
 };\
 importScripts('conf.js')\
-" > sw.js
+" > ../sw.js
 done

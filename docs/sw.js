@@ -1,0 +1,1 @@
+jsproxy_config=x=>{importScripts('bundle.053ebbfa.js')};importScripts('conf.js')
