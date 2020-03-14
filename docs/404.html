@@ -8,7 +8,9 @@
   <meta charset="utf-8">
 </head>
 <body id="t">
-  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" fill="none"><circle cx="50" cy="50" r="25.944" stroke="#93dbe9"><animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="1" keySplines="0 0.2 0.8 1" begin="-0.5s" repeatCount="indefinite" stroke-width="2"/><animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="1" keySplines="0.2 0 0.8 1" begin="-0.5s" repeatCount="indefinite" stroke-width="2"/></circle><circle cx="50" cy="50" r="40" stroke="#689cc5"><animate attributeName="r" calcMode="spline" values="0;40" keyTimes="0;1" dur="1" keySplines="0 0.2 0.8 1" begin="0s" repeatCount="indefinite" stroke-width="2"/><animate attributeName="opacity" calcMode="spline" values="1;0" keyTimes="0;1" dur="1" keySplines="0.2 0 0.8 1" begin="0s" repeatCount="indefinite" stroke-width="2"/></circle></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" fill="none">
+    <defs><style>.cls-1{font-size:12px;fill:#5f4b00;font-family:SourceCodePro-Regular, Source Code Pro;}</style></defs><text class="cls-1" transform="translate(0 9.96)">Loading</text>
+  </svg>
   <script>
   function reload() {
     // 设置最小刷新间隔，防止出错时不停刷新
@@ -16,7 +18,7 @@
     try {
       var last = +sessionStorage._ts || 0
       sessionStorage._ts = curr
-      if (curr - last < 100) {
+      if (curr - last < 1000) {
         return setTimeout(reload, 5000)
       }
     } catch (err) {
