@@ -234,13 +234,17 @@ export function adjustNav(urlStr) {
 
   let part = urlStr.substr(ROOT_LEN)
 
-  console.log("Hello1")
   // 搜索
   if (part.substr(0,7) == "search/")
   {
     const keyword = encodeURIComponent(part.substr(7))
-    console.log("Hello2")
     return PREFIX + DEFAULT_SEARCH.replace('%s', keyword)
+  }
+
+  // 站点assets
+  if (part.substr(0,7) == "assets/")
+  {
+      return
   }
  
   // 任意数量 `-` 之后的部分

@@ -1,1 +1,0 @@
-jsproxy_config=x=>{importScripts('assets/bundle.2fcd2b13.js')};importScripts('conf.js')
