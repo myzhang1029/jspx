@@ -1,4 +1,4 @@
 cd $(dirname $0)
 webpack \
-  --o "../docs/assets/bundle.debug.js" \
+  -o "../docs/assets" \
   --mode development

@@ -2,10 +2,8 @@ DST=../docs/assets
 
 cd $(dirname $0)
 
-rm $DST/bundle.*.js
-
 webpack \
-  --o "$DST/bundle.[hash:8].js" \
+  -o "$DST" \
   --mode production
 
 cd $DST
